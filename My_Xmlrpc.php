@@ -112,7 +112,7 @@ class MY_XML_RPC_Client extends XML_RPC_Client
 				$pre = 'http://';
 			}
 
-			curl_setopt($fp, CURLOPT_URL, $this->server . $this->path);
+			curl_setopt($fp, CURLOPT_URL, $pre.$this->server . $this->path);
 			curl_setopt($fp, CURLOPT_PORT, $this->port);
 			curl_setopt($fp, CURLOPT_HEADER, 1);
 			curl_setopt($fp, CURLOPT_HTTP_VERSION, 1.0);
